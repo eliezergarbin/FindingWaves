@@ -1,0 +1,26 @@
+{
+  "name": "surf-dev",
+  "version": "1.0.0",
+  "description": "Typescript Node.js API",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "typescrpit",
+    "api"
+  ],
+  "author": "Eliezer Nascimento",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^18.7.8",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  }
+}
