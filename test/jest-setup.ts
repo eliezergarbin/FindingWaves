@@ -1,8 +1,12 @@
 import { SetupServer } from '@src/server';
 import supertest from 'supertest';
 
-beforeAll(() => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+let server: SetupServer;
+beforeAll(async () => {
   const server = new SetupServer();
-  server.init();
+  await server.init();
   global.testRequest = supertest(server.getApp());
 });
+
+afterAll(async () => await server.close());
