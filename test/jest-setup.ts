@@ -1,7 +1,6 @@
 import { SetupServer } from '@src/server';
 import supertest from 'supertest';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 let server: SetupServer;
 beforeAll(async () => {
   const server = new SetupServer();
