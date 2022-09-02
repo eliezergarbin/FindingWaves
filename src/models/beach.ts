@@ -8,11 +8,11 @@ export enum BeachPosition {
 }
 
 export interface Beach {
-  _id?: string;
   name: string;
   position: BeachPosition;
   lat: number;
   lng: number;
+  _id?: string;
 }
 
 const schema = new mongoose.Schema(
