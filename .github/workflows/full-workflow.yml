@@ -38,4 +38,4 @@ jobs:
         run: npm run --frozen-lockfile
 
       - name: Run all tests
-        run: npm test
+        run: npm run test
