@@ -1,6 +1,10 @@
 {
     "App": {
       "port": "PORT",
+      "logger": {
+        "enabled": "LOGGER_ENABLED",
+        "level": "LOGGER_LEVEL"
+      },
       "database": {
         "mongoUrl": "MONGODB_URL"
       },

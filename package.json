@@ -23,6 +23,7 @@
   ],
   "author": "Eliezer Nascimento",
   "license": "ISC",
+  "git repository": "https://github.com/eliezergarbin/surf-dev",
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/config": "^3.3.0",
