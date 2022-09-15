@@ -51,6 +51,7 @@
     "@overnightjs/core": "^1.7.6",
     "@types/bcrypt": "^5.0.0",
     "@types/jsonwebtoken": "^8.5.9",
+    "@types/pino-http": "^5.8.1",
     "@types/supertest": "^2.0.12",
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
