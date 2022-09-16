@@ -5,15 +5,15 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && node dist/src/index.js",
-    "start:dev": "ts-node-dev --files \"src/index.ts\" | pino-pretty -c",
-    "test": "npm run test:unit && npm run test:functional",
-    "test:functional": "jest --projects ./test --runInBand",
-    "test:unit": "jest",
+    "start": "yarn build && node dist/src/index.js",
+    "test": "yarn test:unit && yarn test:functional",
+    "start:local": "ts-node-dev --transpile-only src/index.ts  | pino-pretty -c",
     "lint": "eslint ./src ./test --ext .ts",
     "lint:fix": "eslint ./src ./test --ext .ts --fix",
-    "style:check": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
-    "style:fix": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
+    "test:functional": "jest --projects ./test --runInBand",
+    "test:unit": "jest",
+    "style:check": "prettier --check 'src/**/*.ts' 'test/**/*.ts'",
+    "style:fix": "prettier --write 'src/**/*.ts' 'test/**/*.ts'"
   },
   "keywords": [
     "node",
