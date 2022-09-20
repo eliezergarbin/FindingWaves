@@ -1,11 +1,11 @@
 {
-  "name": "surf-dev",
+  "name": "finding-waves",
   "version": "1.0.0",
   "description": "Typescript Node.js API",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "yarn build && node dist/src/index.js",
+    "start": "node dist/src/index.js",
     "test": "yarn lint && yarn style:check && yarn test:unit && yarn test:functional",
     "start:local": "ts-node-dev --transpile-only src/index.ts  | pino-pretty -c",
     "lint": "eslint ./src ./test --ext .ts",
