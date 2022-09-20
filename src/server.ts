@@ -18,7 +18,7 @@ import { apiErrorValidator } from './middlewares/api-error-validator';
 
 export class SetupServer extends Server {
   private server?: http.Server;
-  
+
   constructor(private port = 3000) {
     super();
   }
@@ -47,11 +47,13 @@ export class SetupServer extends Server {
 
   private async docsSetup(): Promise<void> {
     this.app.use('/docs', swaggerUi.serve, swaggerUi.setup(apiSchema));
-    this.app.use(OpenApiValidator.middleware({
-      apiSpec: apiSchema as OpenAPIV3.Document,
-      validateRequests: false,
-      validateResponses: false,
-    }));
+    this.app.use(
+      OpenApiValidator.middleware({
+        apiSpec: apiSchema as OpenAPIV3.Document,
+        validateRequests: true,
+        validateResponses: true,
+      })
+    );
   }
 
   private setupControllers(): void {

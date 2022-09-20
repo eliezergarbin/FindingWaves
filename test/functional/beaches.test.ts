@@ -41,19 +41,18 @@ describe('Beaches functional tests', () => {
         name: 'Manly',
         position: 'E',
       };
-
       const response = await global.testRequest
         .post('/beaches')
         .set({ 'x-access-token': token })
         .send(newBeach);
 
-        expect(response.status).toBe(400);
-        expect(response.body).toEqual({
-          code: 400,
-          error: 'Bad Request',
-          message:
-            'Beach validation failed: lat: Cast to Number failed for value "invalid_string" (type string) at path "lat"',
-        });
+      //tests will be broken, not middleware
+      expect(response.status).toBe(400);
+      expect(response.body).toEqual({
+        code: 400,
+        error: 'Bad Request',
+        message: 'request.body.lat should be number',
+      });
     });
 
     it.skip('should return 500 when there is any error other than validation error', async () => {

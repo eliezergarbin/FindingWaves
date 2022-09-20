@@ -11,10 +11,10 @@ export class BeachesController extends BaseController {
   public async create(req: Request, res: Response): Promise<void> {
     try {
       const beach = new Beach({ ...req.body, ...{ user: req.decoded?.id } });
-        const result = await beach.save();
-        res.status(201).send(result);
-      } catch (error) {
-        this.sendCreateUpdateErrorResponse(res, error);
-      }
+      const result = await beach.save();
+      res.status(201).send(result);
+    } catch (error) {
+      this.sendCreateUpdateErrorResponse(res, error);
+    }
   }
 }

@@ -6,14 +6,14 @@
   "scripts": {
     "build": "tsc",
     "start": "yarn build && node dist/src/index.js",
-    "test": "yarn test:unit && yarn test:functional",
+    "test": "yarn lint && yarn style:check && yarn test:unit && yarn test:functional",
     "start:local": "ts-node-dev --transpile-only src/index.ts  | pino-pretty -c",
     "lint": "eslint ./src ./test --ext .ts",
     "lint:fix": "eslint ./src ./test --ext .ts --fix",
     "test:functional": "jest --projects ./test --runInBand",
     "test:unit": "jest",
-    "style:check": "prettier --check 'src/**/*.ts' 'test/**/*.ts'",
-    "style:fix": "prettier --write 'src/**/*.ts' 'test/**/*.ts'"
+    "style:check": "prettier --check src/**/*.ts test/**/*.ts",
+    "style:fix": "prettier --write src/**/*.ts test/**/*.ts"
   },
   "keywords": [
     "node",
@@ -32,6 +32,7 @@
     "@types/config": "^3.3.0",
     "@types/cors": "^2.8.12",
     "@types/express-pino-logger": "^4.0.3",
+    "@types/express-rate-limit": "^6.0.0",
     "@types/jest": "^28.1.7",
     "@types/jsonwebtoken": "^8.5.9",
     "@types/lodash": "^4.14.185",
@@ -63,10 +64,12 @@
     "express": "^4.18.1",
     "express-openapi-validator": "^4.13.8",
     "express-pino-logger": "^7.0.0",
+    "express-rate-limit": "^6.6.0",
     "http-status-codes": "^2.2.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
     "module-alias": "^2.2.2",
+    "moment": "^2.29.4",
     "mongoose": "^6.5.4",
     "pino": "^7.6.2",
     "swagger-ui-express": "^4.5.0"

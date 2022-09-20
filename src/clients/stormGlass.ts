@@ -1,11 +1,15 @@
 import { InternalError } from '@src/util/errors/internal-error';
 import config, { IConfig } from 'config';
+// Another way to have similar behaviour to TS namespaces
 import * as HTTPUtil from '@src/util/request';
+import { TimeUtil } from '@src/util/time';
+
 export interface StormGlassPointSource {
   [key: string]: number;
 }
+
 export interface StormGlassPoint {
-  readonly time: string;
+  time: string;
   readonly waveHeight: StormGlassPointSource;
   readonly waveDirection: StormGlassPointSource;
   readonly swellDirection: StormGlassPointSource;
@@ -14,6 +18,7 @@ export interface StormGlassPoint {
   readonly windDirection: StormGlassPointSource;
   readonly windSpeed: StormGlassPointSource;
 }
+
 export interface StormGlassForecastResponse {
   hours: StormGlassPoint[];
 }
@@ -29,11 +34,19 @@ export interface ForecastPoint {
   windSpeed: number;
 }
 
+/**
+ * This error type is used when a request reaches out to the StormGlass API but returns an error
+ */
 export class StormGlassUnexpectedResponseError extends InternalError {
   constructor(message: string) {
     super(message);
   }
 }
+
+/**
+ * This error type is used when something breaks before the request reaches out to the StormGlass API
+ * eg: Network error, or request validation error
+ */
 export class ClientRequestError extends InternalError {
   constructor(message: string) {
     const internalMessage =
@@ -41,6 +54,7 @@ export class ClientRequestError extends InternalError {
     super(`${internalMessage}: ${message}`);
   }
 }
+
 export class StormGlassResponseError extends InternalError {
   constructor(message: string) {
     const internalMessage =
@@ -49,7 +63,10 @@ export class StormGlassResponseError extends InternalError {
   }
 }
 
-const stormGlassResourceConfig: IConfig = config.get(
+/**
+ * We could have proper type for the configuration
+ */
+const stormglassResourceConfig: IConfig = config.get(
   'App.resources.StormGlass'
 );
 
@@ -60,17 +77,19 @@ export class StormGlass {
 
   constructor(protected request = new HTTPUtil.Request()) {}
 
+  //TODO someone to cache this call
   public async fetchPoints(lat: number, lng: number): Promise<ForecastPoint[]> {
+    const endTimestamp = TimeUtil.getUnixTimeForAFutureDay(1);
     try {
       const response = await this.request.get<StormGlassForecastResponse>(
-        `${stormGlassResourceConfig.get(
+        `${stormglassResourceConfig.get(
           'apiUrl'
         )}/weather/point?lat=${lat}&lng=${lng}&params=${
           this.stormGlassAPIParams
-        }&source=${this.stormGlassAPISource}`,
+        }&source=${this.stormGlassAPISource}&end=${endTimestamp}`,
         {
           headers: {
-            Authorization: stormGlassResourceConfig.get('apiToken'),
+            Authorization: stormglassResourceConfig.get('apiToken'),
           },
         }
       );
@@ -90,7 +109,6 @@ export class StormGlass {
       throw new ClientRequestError(JSON.stringify(err));
     }
   }
-
   private normalizeResponse(
     points: StormGlassForecastResponse
   ): ForecastPoint[] {
