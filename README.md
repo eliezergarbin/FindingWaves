@@ -34,3 +34,4 @@
 
 
 ## 💻 Project
+Surf forecast API that allows you to register the beaches you want, and classify which one is the most suitable for surfing in time.
