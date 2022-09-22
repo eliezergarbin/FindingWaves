@@ -35,3 +35,19 @@
 
 ## 💻 Project
 Surf forecast API that allows you to register the beaches you want, and classify which one is the most suitable for surfing in time.
+
+## 🤔 How to contribute
+
+- Make a fork;
+- Create a branck with your feature: `git checkout -b my-feature`;
+- Commit changes: `git commit -m 'feat: My new feature'`;
+- Make a push to your branch: `git push origin my-feature`.
+
+After merging your receipt request to done, you can delete a branch from yours.
+
+## :memo: License
+
+This project is under the MIT license. See the [LICENSE](https://github.com/EliezerGarbin/Find-your-DUO/blob/master/LICENSE) for details.
+
+
+Made with by Eliézer Garbin :wave: [Get in touch!](https://www.linkedin.com/in/eliezergarbin/)
