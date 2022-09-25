@@ -39,6 +39,59 @@ Surf forecast API that allows you to register the beaches you want, and classify
 
 The project was created with its Node.js, Typescript, React and MongoDB technologies, you can register on the beaches and after registering, the system will inform the scheduled time for each beach at certain times and also containing important information for surfing such as: wind direction, wind speed, wave speed, wave duration, wave height, swell direction and swell height. Finally, based on all this data, the classification of the best beaches ever registered for surfing will be delivered.
 
+## 🚀 Technologies
+This project was developed with the following technologies:
+
+- [Node.js][nodejs]
+- [TypeScript][typescript]
+- [React][reactjs]
+
+## :information_source: How To Use
+
+To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js][nodejs] + [npm][npm] installed on your computer.
+
+From your command line:
+
+### Install Back-end
+
+```bash
+# Clone this repository
+$ git clone https://github.com/EliezerGarbin/FindingWaves.git
+
+# Go into the repository
+$ cd FindingWaves
+
+# Install dependencies
+$ yarn install --frozen-lockfile || npm install
+
+# Run Build
+$ yarn build && yarn start || npm run build && npm run start
+
+# Start server
+$ yarn dev || npm run dev
+
+# running on port 3000
+```
+
+### Install Front-end
+
+```bash
+# Clone this repository
+$ git clone https://github.com/EliezerGarbin/FindingWaves.git
+
+# Go into the repository
+$ cd FindingWaves/web
+
+# Install dependencies
+$ start
+
+# Run
+$ yarn dev || npm run dev
+
+# running on port 3001
+```
+
+
 ## 🤔 How to contribute
 
 - Make a fork;
@@ -54,3 +107,7 @@ This project is under the MIT license. See the [LICENSE](https://github.com/Elie
 
 
 Made with by Eliézer Garbin :wave: [Get in touch!](https://www.linkedin.com/in/eliezergarbin/)
+
+[nodejs]: https://nodejs.org/
+[reactjs]: https://reactjs.org
+[typescript]: https://www.typescriptlang.org/
