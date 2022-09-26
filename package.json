@@ -22,8 +22,8 @@
     "api"
   ],
   "author": "Eliezer Nascimento",
-  "license": "ISC",
-  "repository": "git+https://github.com/eliezergarbin/surf-dev.git",
+  "license": "MIT",
+  "repository": "git+https://github.com/eliezergarbin/FindingWaves.git",
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/config": "^3.3.0",
