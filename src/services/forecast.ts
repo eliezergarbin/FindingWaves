@@ -17,6 +17,7 @@ export class ForecastProcessingInternalError extends InternalError {
     super(`Unexpected error during the forecast processing: ${message}`);
   }
 }
+
 export class Forecast {
   constructor(
     protected stormGlass = new StormGlass(),
@@ -54,7 +55,7 @@ export class Forecast {
   private mapForecastByTime(forecast: BeachForecast[]): TimeForecast[] {
     const forecastByTime: TimeForecast[] = [];
     for (const point of forecast) {
-      const timePoint = forecastByTime.find((f) => f.time == point.time);
+      const timePoint = forecastByTime.find((f) => f.time === point.time);
       if (timePoint) {
         timePoint.forecast.push(point);
       } else {

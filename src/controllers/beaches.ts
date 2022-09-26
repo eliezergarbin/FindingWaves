@@ -1,6 +1,6 @@
 import { Controller, Post, ClassMiddleware } from '@overnightjs/core';
-import { Beach } from '@src/models/beach';
 import { Request, Response } from 'express';
+import { Beach } from '@src/models/beach';
 import { authMiddleware } from '@src/middlewares/auth';
 import { BaseController } from '.';
 
