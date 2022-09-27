@@ -1,32 +1,25 @@
-## 🌊🌊 Finding waves 🌊🌊
-
-Este app foi construído com base no [Create React App](https://github.com/facebook/create-react-app) com o intuito de **única e exclusivamente** suportar o aprendizado durante o curso de [API com Node.js e TypeScript](https://www.nodejs-typescript-api.com/curso-gratis/), NÃO segue os padrões de desenvolvimento abordados no curso e não deve ser usado em produção. Importante lembrar que o app foi pensado por dois desenvolvedores e um total de ZERO designers ¯\_(ツ)\_/¯. É intencional que o app não tenha uma task de "Build" (embora tu possa fácilmente criar uma com base na documentação sobre [deploy de uma React App](https://create-react-app.dev/docs/deployment/)).
-
 ## Como rodar o projeto:
 
-1. No arquivo `src/config.js`
+1. In the `src/config.js` file.
+Update the API_URL to the address and port where the backend is running, for example: 'http://localhost:3000'
 
-- atualize a `API_URL` para o endereço e porta onde estiver rodando o back-end, por exemplo: 'http://localhost:3000'
+2. In the terminal, in the directory at the front of the project (that is, inside the `/web` directory) run `yarn` to install the dependencies and then `yarn start` to run the project which by default will be available at [http://localhost:3001](http://localhost:3001).
 
-2. No terminal, no diretório da parte de front do projeto (ou seja, dentro do diretório `/web`) execute `yarn` para instalar as dependencias e em seguida `yarn start` para executar o projeto que por padrão vai ficar disponível em [http://localhost:3001](http://localhost:3001).
-
-Pronto! 🤓
-
-## Scripts disponíveis
+## Scripts
 
 ### `yarn start`
 
-Executa o app em modo desenvolvimento [http://localhost:3001](http://localhost:3001)
+Runs the app in development mode [http://localhost:3001](http://localhost:3001)
 
 ### `yarn lint`
 
-Executa o [ESLINT](https://eslint.org/) <br />
+Run the [ESLINT](https://eslint.org/) <br />
 
 ### `yarn format`
 
-Executa o [PRETTIER](https://prettier.io/) <br />
+Run the [PRETTIER](https://prettier.io/) <br />
 
-## Para saber mais
+## Learn More
 
 - [React App](https://facebook.github.io/create-react-app/docs/getting-started)
 - [React-query](https://react-query.tanstack.com/)
