@@ -39,6 +39,11 @@ Surf forecast API that allows you to register the beaches you want, and classify
 
 The project was created with its Node.js, Typescript, React and MongoDB technologies, you can register on the beaches and after registering, the system will inform the scheduled time for each beach at certain times and also containing important information for surfing such as: wind direction, wind speed, wave speed, wave duration, wave height, swell direction and swell height. Finally, based on all this data, the classification of the best beaches ever registered for surfing will be delivered.
 
+<p align="center">
+    <img alt="Example" title="Example" src="https://user-images.githubusercontent.com/59988262/192548340-0b7e45ec-0f82-4174-9c61-3d6720807318.png" width="800px" />
+
+</p>
+
 ## Technologies
 This project was developed with the following technologies:
 
