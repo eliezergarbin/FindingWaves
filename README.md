@@ -120,7 +120,7 @@ After merging your receipt request to done, you can delete a branch from yours.
 
 ## License
 
-This project is under the MIT license. See the [LICENSE](https://github.com/EliezerGarbin/FindingWaves/blob/master/LICENSE) for details.
+This project is under the MIT license. See the [LICENSE](https://github.com/EliezerGarbin/FindingWaves/blob/master/LICENSE.md) for details.
 
 
 Made with by Eliézer Garbin :wave: [Get in touch!](https://www.linkedin.com/in/eliezergarbin/)
