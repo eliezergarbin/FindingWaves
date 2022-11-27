@@ -8,7 +8,7 @@
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/EliezerGarbin/FindingWaves">
 	
   <a href="https://www.linkedin.com/in/eliezergarbin/">
-    <img alt="Made by EliezerGarbin" src="https://img.shields.io/badge/made%20by-EliezerGarbin-%2304D361">
+    <img alt="Made by eliezergarbin" src="https://img.shields.io/badge/made%20by-eliezergarbin-%2304D361">
   </a>
 
   <a href="https://github.com/EliezerGarbin/FindingWaves/commits/master">
